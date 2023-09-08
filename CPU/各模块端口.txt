@@ -1,0 +1,88 @@
+第一节拍
+
+1.PC
+module pcou(
+    input clk,rst;
+    input [31:0] npc;
+    output reg [31:0] pc;
+    );
+
+2.imem
+module imemo(
+    input [31:0] pc,
+    output reg [31:0] ir
+);
+3.ir
+module ire(
+    input [31:0] ir,
+    output reg [4:0] ar,
+    output reg [4:0] br,
+    output reg [15:0] imm,
+    output reg [5:0] op,
+    output reg [4:0] rdr
+);
+4.add
+module adda(
+    input [31:0] pc,
+    output reg [31:0] npc
+);
+
+第二节拍
+5.regs
+module regis(
+    input   t2,
+    input   [4 :0] ar, 
+    output  reg [31:0] a,  
+    input   [4 :0] br, 
+    output  reg [31:0] b,  
+    input   we,
+    input   [4 :0] wr, 
+    input   [31:0] w
+    );
+6.ex
+module ex(
+    input   t2,
+    input   [15:0] imm,
+    output  reg [31:0] imme
+    );
+第三节拍
+7.mux
+module muxi(
+    input [31:0] x,
+    input [31:0] y,
+    input s,
+    output reg [1:0] z
+);
+8.alu
+module alu (
+    input t3,
+    input [31:0] a,
+    input [31:0] b,
+    input [10:0] f,
+    output reg [31:0] aluout
+);
+第四节拍
+dmem
+module dmemo(
+    input t4,
+    input  dwe,
+    input   [4 :0] rr, 
+    output  reg [31:0] r,  
+    input   [4 :0] wr, 
+    input   [31:0] w
+);
+ju
+module jum(
+    input t2,
+    input [31:0] npc,
+    input [31:0] ind,
+    input ju,
+    output  reg [31:0] npcn
+    );
+jcond
+module jcond(
+    input t3,
+    input [31:0] a,
+    input [31:0] b,
+    output  reg s41
+    );
