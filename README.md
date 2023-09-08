@@ -1,2 +1,3 @@
 # mips
-a simple mips design using verilog
+a simple mips cpu design using verilog
+
