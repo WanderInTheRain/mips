@@ -1,4 +1,3 @@
-```markdown
 # Simple MIPS CPU Design using Verilog
 
 This project implements a basic MIPS (Microprocessor without Interlocked Pipeline Stages) CPU using Verilog. The goal is to provide a simple and educational example of a MIPS processor in hardware description language.
